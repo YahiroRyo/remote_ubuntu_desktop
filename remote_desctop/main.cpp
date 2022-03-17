@@ -14,17 +14,9 @@
 #include <string>
 #include <vector>
 
-const float SLEEP_MINUTES = 0.0625 * 1000000;
+#include "vector2.cpp"
 
-struct Vector2 {
-  public:
-    int x;
-    int y;
-    Vector2(int x, int y) {
-      this->x = x;
-      this->y = y;
-    }
-};
+const float SLEEP_MINUTES = 0.0625 * 1000000;
 
 int main(int argc, char *const argv[]) {
   Display* d = XOpenDisplay(NULL);
@@ -64,6 +56,7 @@ int main(int argc, char *const argv[]) {
         XFlush(d);
       }
     }
+    
   }
   XCloseDisplay(d);
 
